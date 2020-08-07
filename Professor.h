@@ -13,7 +13,7 @@ public:
     Professor();
     Professor(double, double);
     Professor(const std::string&, const std::string&, int, double, double);
-    virtual ~Professor() = 0;
+    virtual ~Professor() = default; // Si es necesario todos los destructores hijos
     double getMonthlySalary();
     void setMonthlySalary(double);
     double getCommissionRate();

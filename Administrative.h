@@ -17,7 +17,7 @@ public:
     void setMonthlySalary(double);
     const double salary() override;
     const std::string toString() override;
-    virtual ~Administrative() = 0;
+    virtual ~Administrative() = default;
 };
 
 

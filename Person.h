@@ -19,7 +19,7 @@ class Person {
 public:
     Person();
     Person(const std::string&, const std::string&, int);
-    virtual ~Person() = 0;
+    virtual ~Person() = default;
     std::string getFirstName();
     void setFirstName(const std::string);
     std::string getLastName();
