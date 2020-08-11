@@ -37,7 +37,7 @@ const std::vector<Professor> &University::getProfessorList() const {
     return professorList;
 }
 
-void University::setProfessorList(const std::vector<Professor> &professorList) {
+void University::setProfessorList(const std::vector<Professor> &professorListAux) {
     University::professorList = professorList;
 }
 
@@ -45,6 +45,12 @@ const std::vector<Administrative> &University::getAdministrativeList() const {
     return administrativeList;
 }
 
-void University::setAdministrativeList(const std::vector<Administrative> &administrativeList) {
-    University::administrativeList = administrativeList;
+void University::setAdministrativeList(const std::vector<Administrative> &administrativeListAux) {
+       // administrativeList.swap(administrativeListAux);
+        administrativeList.resize(administrativeListAux.size());
+        for (int i =0; i<administrativeListAux.size(); i++){
+            administrativeList[i] = administrativeListAux[i];
+        }
+
+   // University::administrativeList = administrativeList;
 }

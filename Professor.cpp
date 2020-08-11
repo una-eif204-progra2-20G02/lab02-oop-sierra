@@ -15,7 +15,7 @@ Professor::Professor(double monthlySalary, double commissionRate) {
     this->monthlySalary = monthlySalary;
     this->commissionRate = commissionRate;
 }
-// Revisar Constructor con Persona
+
 Professor::Professor(const std::string& firstName, const std::string& lastName, int documentId, double monthlySalary, double commissionRate) : Person(firstName, lastName, documentId) {
     this->monthlySalary = monthlySalary;
     this->commissionRate = commissionRate;
