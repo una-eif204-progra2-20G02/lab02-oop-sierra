@@ -7,7 +7,17 @@
 #include "Person.h"
 
 class Administrative: public Person {
+    double monthlySalary;
 
+public:
+    Administrative();
+    Administrative(double monthlySalary);
+    Administrative(const std::string&, const std::string&,int, double);
+    double getMonthlySalary();
+    void setMonthlySalary(double);
+    const double salary() override;
+    const std::string toString() override;
+    virtual ~Administrative() = default;
 };
 
 

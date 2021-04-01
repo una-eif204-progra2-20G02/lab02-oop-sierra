@@ -13,7 +13,21 @@
  * Abstract Class of Person
  */
 class Person {
-
+    std::string firstName;
+    std::string lastName;
+    int documentId;
+public:
+    Person();
+    Person(const std::string&, const std::string&, int);
+    virtual ~Person() = default;
+    std::string getFirstName();
+    void setFirstName(const std::string);
+    std::string getLastName();
+    void setLastName(const std::string);
+    int getDocumentId();
+    void setDocumentId(int);
+    virtual const double salary() = 0;
+    virtual const std::string toString() = 0;
 };
 
 
